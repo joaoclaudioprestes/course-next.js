@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 // Global
 const name: string = "João C. Prestes";
@@ -51,12 +52,35 @@ export default function Home() {
       <div>
         <Header />
         <div className="flex gap-2 p-2 flex-wrap justify-center items-center">
-          <Card productImage="/vercel.svg" productName="Tenis" price={243} discont={12}/>
-          <Card productImage="/next.svg" productName="Camisa" price={213} discont={23}/>
+          <Card
+            productImage="/vercel.svg"
+            productName="Tenis"
+            price={243}
+            discont={12}
+          />
+          <Card
+            productImage="/next.svg"
+            productName="Camisa"
+            price={213}
+            discont={23}
+          />
           <Card productImage="/vercel.svg" productName="Celular" price={3242} />
           <Card productImage="/next.svg" productName="Sapato" price={324} />
           <Card productImage="/vercel.svg" productName="Mesa" price={3423} />
           <Card productImage="/next.svg" productName="Quadro" price={150} />
+        </div>
+
+        <div className="w-full flex justify-center items-center p-4 flex-col gap-2">
+          <h2 className="text-[20px] font-bold">Trabalhando com Links</h2>
+          <nav className="flex flex-col gap-2">
+            <Link href="/">Página Inicial</Link>
+            <Link href={
+              {
+                pathname: "/Home/teste"
+              }
+            }>Home</Link>
+            <Link href="/Teste">Produtos</Link>
+          </nav>
         </div>
       </div>
     </main>
