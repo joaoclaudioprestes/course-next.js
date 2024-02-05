@@ -74,11 +74,13 @@ export default function Home() {
           <h2 className="text-[20px] font-bold">Trabalhando com Links</h2>
           <nav className="flex flex-col gap-2">
             <Link href="/">Página Inicial</Link>
-            <Link href={
-              {
-                pathname: "/Home/teste"
-              }
-            }>Home</Link>
+            <Link
+              href={{
+                pathname: "/Home/teste",
+              }}
+            >
+              Home
+            </Link>
             <Link href="/Teste">Produtos</Link>
           </nav>
         </div>
