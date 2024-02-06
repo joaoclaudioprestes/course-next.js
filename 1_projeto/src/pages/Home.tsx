@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 export default function Home() {
+  const router = useRouter()
+  // const name = router.query.name
+  // const user = router.query.user
+
+  const {name, user} = router.query
+  console.log(name, user)
+
   return (
     <div>
       <h1>Página - Home</h1>
@@ -11,6 +20,11 @@ export default function Home() {
           <Link href={"/Home"}>Home</Link>
           <Link href={"/Teste/"}>Produtos</Link>
         </nav>
+      </div>
+
+      <div>
+        <h2>Name: {name}</h2>
+        <h2>User: {user}</h2>
       </div>
     </div>
   );

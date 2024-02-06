@@ -76,7 +76,11 @@ export default function Home() {
             <Link href="/">Página Inicial</Link>
             <Link
               href={{
-                pathname: "/Home/teste",
+                pathname: "/Home",
+                query: {
+                  user: "jpres_tes",
+                  name: "joão"
+                }
               }}
             >
               Home
