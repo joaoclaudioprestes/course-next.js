@@ -64,7 +64,9 @@ export default function Home() {
             price={213}
             discont={23}
           />
-          <Card productImage="/vercel.svg" productName="Celular" price={3242} />
+          <Card productImage="/vercel.svg" productName="Celular" price={3242}>
+            <h1 className="text-center">Exemplo - Children de um componente!</h1>
+          </Card>
           <Card productImage="/next.svg" productName="Sapato" price={324} />
           <Card productImage="/vercel.svg" productName="Mesa" price={3423} />
           <Card productImage="/next.svg" productName="Quadro" price={150} />

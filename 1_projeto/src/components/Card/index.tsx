@@ -6,6 +6,7 @@ interface CardProps {
   productName: string;
   price: number;
   discont?: number; // Consider correcting the spelling to "discount"
+  children?: any
 }
 
 export default function Card({
@@ -13,6 +14,7 @@ export default function Card({
   productName,
   price,
   discont,
+  children
 }: CardProps) {
   const [descont, setDescont] = useState(false);
   let calcule = 0;
@@ -46,6 +48,10 @@ export default function Card({
           Preço de venda: {calculeValue(price, calcule).toFixed(2)}
         </h3>
       ) : null}
+      
+      <div>
+        {children}
+      </div>
     </div>
   );
 }
